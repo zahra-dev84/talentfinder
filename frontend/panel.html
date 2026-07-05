@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Panel</title>
+</head>
+<body>
+
+<h2>User Management Panel</h2>
+
+<ul id="list"></ul>
+
+<script>
+const API = "http://127.0.0.1:5000";
+
+// ---------- READ ----------
+async function loadUsers() {
+    const res = await fetch(`${API}/users`);
+    const data = await res.json();
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    data.forEach(user => {
+        list.innerHTML += `
+            <li>
+                ${user.firstName} ${user.lastName}
+                | ${user.email}
+
+                <button onclick="deleteUser(${user.id})">Delete</button>
+                <button onclick="editUser(${user.id})">Edit</button>
+            </li>
+        `;
+    });
+}
+
+// ---------- DELETE ----------
+async function deleteUser(id) {
+    await fetch(`${API}/delete/${id}`, {
+        method: "DELETE"
+    });
+
+    loadUsers();
+}
+
+// ---------- UPDATE ----------
+async function editUser(id) {
+    const firstName = prompt("New First Name:");
+    const lastName = prompt("New Last Name:");
+     const PhonNumber = prompt("New PhonNumber:");
+    const email = prompt("New Email:");
+    const password = prompt("New Password:");
+
+    if (!firstName) return;
+
+    await fetch(`${API}/update/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            firstName,
+            lastName,
+            PhonNumber,
+            email,
+            password,
+        
+        })
+    });
+
+    loadUsers();
+}
+
+// شروع
+loadUsers();
+</script>
+
+</body>
+</html>

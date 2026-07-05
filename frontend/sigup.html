@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>فرم ثبت نام </title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center font-danamedium!">
+    <svg class="hidden">
+        <symbol id="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+        <symbol id="icon_tik" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </symbol>
+
+    </svg>
+
+
+
+
+
+
+
+    <div class="w-full max-w-lg bg-white rounded-2xl shadow-2xl! p-8 ">
+
+        <!-- Progress Bar -->
+        <div class="w-full h-3 bg-gray-200 rounded-full mb-8">
+            <div id="progress" class="h-3 bg-orange-400 rounded-full transition-all duration-500" style="width:33%">
+            </div>
+        </div>
+
+        <form id="multiStepForm">
+
+            <!-- STEP 1 -->
+            <div id="step1">
+
+                <h2 class="text-2xl  font-danamedium mb-5!">
+                    ثبت نام
+                </h2>
+
+                <input id="firstName" type="text" placeholder="نام" class="w-full border p-3 rounded-lg mb-4">
+
+                <input id="lastName" type="text" placeholder="نام خانوادگی" class="w-full border p-3 rounded-lg mb-4">
+
+                <input id="PhonNumber" type="tel" placeholder="0935125487"
+                    class="w-full border p-3 rounded-lg mb-4 rtl">
+
+                <button type="button" id="next1" class="w-full bg-orange-400 text-white py-3 rounded-lg text-base ">
+
+                    مرحله بعد
+                </button>
+
+            </div>
+
+            <!-- STEP 2 -->
+            <div id="step2" class="hidden">
+
+                <h2 class="text-2xl font-bold mb-5!">
+                    اطلاعات حساب
+                </h2>
+
+                <input id="email" type="email" placeholder="ایمیل" class="w-full border p-3 rounded-lg mb-4">
+
+                <input id="password" type="password" placeholder="رمز عبور" class="w-full border p-3 rounded-lg mb-4">
+
+
+
+                <div class="mt-2 mb-2 space-y-2 text-sm">
+                    <div id="ruleLength" class="flex items-center gap-2 text-red-500">
+                        <svg class="w-3 h-3 icon ">
+                            <use xlink:href="#icon"></use>
+                        </svg>
+                       
+                        <span>حداقل 8 کاراکتر باشه</span>
+                    </div>
+
+                    <div id="ruleLower" class="flex items-center gap-2 text-red-500">
+                        <svg class="w-3 h-3 icon">
+                            <use xlink:href="#icon"></use>
+                        </svg>
+                        <span>حداقل یک حرف کوچک داشته باشد</span>
+                    </div>
+                    <div id="ruleUpper" class="flex items-center gap-2 text-red-500">
+                        <svg class="w-3 h-3 icon">
+                            <use xlink:href="#icon"></use>
+                        </svg>
+                        <span>حداقل یک حرف بزرگ داشته باشد</span>
+                    </div>
+                    <div id="ruleNumber" class="flex items-center gap-2 text-red-500">
+                        <svg class="w-3 h-3 icon">
+                            <use xlink:href="#icon"></use>
+                        </svg>
+                        <span>حداقل یک عدد داشته باشد</span>
+                    </div>
+                    <div id="ruleSpecial" class="flex items-center gap-2 text-red-500">
+                        <svg class="w-3 h-3 icon">
+                            <use xlink:href="#icon"></use>
+                        </svg>
+                        <span>حداقل یک کاراکتر خاص داشته باشد{*/@ #}</span>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+
+                    <button type="button" id="back1" class="w-1/2 bg-slate-800 text-white py-3 rounded-lg">
+                        قبلی
+                    </button>
+
+                    <button type="submi" id="submitBtn"
+                        class="w-1/2 bg-orange-500 text-white py-3 rounded-lg opacity-50 cursor-not-allowed">
+                        ثبت نام
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- STEP 3 -->
+
+
+
+        </form>
+
+    </div>
+
+    <script src="./js/signup.js"></script>
+
+</body>
+
+</html>

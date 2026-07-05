@@ -1,0 +1,19 @@
+# Python
+backend/__pycache__/
+*.pyc
+
+# Database
+backend/*.db
+
+# Vite
+frontend/.vite/
+
+# Node
+frontend/node_modules/
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+.DS_Store

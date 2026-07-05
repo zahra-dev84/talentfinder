@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>نتیجه آزمون</title>
+
+<link rel="stylesheet" href="./src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-slate-100">
+
+<div class="max-w-6xl mx-auto py-10 px-5">
+
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+
+        <!-- Header -->
+
+        <div class="bg-slate-900 p-10 text-center">
+
+            <h1 class="text-4xl font-bold text-white">
+                نتیجه آزمون شخصیت
+            </h1>
+
+            <p class="text-orange-300 mt-3">
+                استعداد شغلی شما بر اساس تست هالند
+            </p>
+
+        </div>
+
+        <!-- شخصیت -->
+
+        <div class="p-10">
+
+            <div id="profileCard"></div>
+
+        </div>
+
+        <!-- نقاط قوت و مشاغل -->
+
+        <div class="grid md:grid-cols-2 gap-8 px-10 pb-10">
+
+            <!-- نقاط قوت -->
+
+            <div class="bg-white rounded-2xl shadow-lg border">
+
+                <div class="bg-orange-500 rounded-t-2xl p-4">
+
+                    <h3 class="text-white text-2xl font-bold">
+                        💪 نقاط قوت
+                    </h3>
+
+                </div>
+
+                <div
+                    id="strengths"
+                    class="p-6 leading-10 text-slate-700">
+                </div>
+
+            </div>
+
+            <!-- مشاغل -->
+
+            <div class="bg-white rounded-2xl shadow-lg border">
+
+                <div class="bg-slate-900 rounded-t-2xl p-4">
+
+                    <h3 class="text-white text-2xl font-bold">
+                        💼 مشاغل مناسب
+                    </h3>
+
+                </div>
+
+                <div
+                    id="jobs"
+                    class="p-6 leading-10 text-slate-700">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- نمودار -->
+
+        <div class="px-10 pb-10">
+
+            <div class="bg-white rounded-2xl shadow-lg border">
+
+                <div class="bg-slate-900 rounded-t-2xl p-4">
+
+                    <h3 class="text-white text-2xl font-bold">
+                        📊 امتیاز تیپ‌های شخصیت
+                    </h3>
+
+                </div>
+
+                <div class="p-8">
+
+                    <div id="scores" class="space-y-6"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ویدیو -->
+
+        <div class="px-10 pb-10">
+
+            <div class="bg-white rounded-2xl shadow-lg border">
+
+                <div class="bg-orange-500 rounded-t-2xl p-4">
+
+                    <h3 class="text-white text-2xl font-bold">
+
+                        🎥 ویدیوهای آموزشی
+
+                    </h3>
+
+                </div>
+
+                <div
+                    id="videos"
+                    class="grid md:grid-cols-2 gap-5 p-8">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- دوره -->
+
+        <div class="px-10 pb-10">
+
+            <div class="bg-white rounded-2xl shadow-lg border">
+
+                <div class="bg-slate-900 rounded-t-2xl p-4">
+
+                    <h3 class="text-white text-2xl font-bold">
+
+                        📚 دوره‌های پیشنهادی
+
+                    </h3>
+
+                </div>
+
+                <div
+                    id="courses"
+                    class="grid md:grid-cols-3 gap-5 p-8">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="./js/result.js"></script>
+
+</body>
+
+</html>
