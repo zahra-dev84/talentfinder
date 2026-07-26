@@ -4,10 +4,10 @@ conn = sqlite3.connect("quiz.db")
 cursor = conn.cursor()
 
 # اول جواب‌ها حذف می‌شوند
-cursor.execute("DELETE FROM answer")
+cursor.execute("DELETE FROM personality_type")
+
 
 # بعد سؤال‌ها
-cursor.execute("DELETE FROM question")
 
 conn.commit()
 conn.close()

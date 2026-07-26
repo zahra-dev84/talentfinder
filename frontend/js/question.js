@@ -14,7 +14,7 @@ if (!userId) {
     window.location.href = "login.html"
 }
 // ---------- تنظیمات ----------
-const TOTAL_QUESTIONS = 31;
+const TOTAL_QUESTIONS = 24;
 
 let currentQuestion = 1;
 let selectedAnswer = null;//هنوز سوالی انتخاب نشده
